@@ -69,7 +69,30 @@ button, #newGameBtn {
 }
 
 
-#turnIndicator { padding:8px 14px; border-radius:10px; border:2px solid #000; transition: background-color .2s ease, color .2s ease; display:inline-block; }
-#turnIndicator.turn--white { background:#fff; color:#000; border-color:#000; }
-#turnIndicator.turn--black { background:#000; color:#fff; border-color:#000; }
+
+#turnIndicator {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: color 200ms ease;
+    background: transparent; /* sfondo trasparente */
+    border: none; /* niente bordo */
+}
+
+/* Turno Bianco → testo bianco */
+#turnIndicator.turn--white {
+    color: #fff;
+}
+
+/* Turno Nero → testo nero */
+#turnIndicator.turn--black {
+    color: #000;
+}
+
+
 
