@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -12,37 +11,21 @@
     <!-- Nasconde completamente la status bar -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+    
     <title>Scacchi 2 Giocatori</title>
 
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Stili per il turn indicator */
-        #turnIndicator {
-            font-size: 20px;
-            margin-top: 5px;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 8px;
-            border: 2px solid #000;
-            display: inline-block;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .white-turn {
-            background-color: #fff;
-            color: #000;
-        }
-        .black-turn {
-            background-color: #000;
-            color: #fff;
-        }
-    </style>
 </head>
 <body>
 
     <h1>Scacchi – 2 Giocatori</h1>
 
-    <div id="turnIndicator" class="white-turn">
+     <div id="turnIndicator" style="
+        font-size: 20px;
+        margin-top: 5px;
+        font-weight: bold;
+    ">
         Tocca al Bianco
     </div>
 
@@ -65,33 +48,9 @@
         Nuova Partita
     </button>    
 
-    <script>
-        let currentTurn = 'white'; // 'white' o 'black'
-        const turnIndicator = document.getElementById('turnIndicator');
-
-        function updateTurnIndicator() {
-            if (currentTurn === 'white') {
-                turnIndicator.classList.remove('black-turn');
-                turnIndicator.classList.add('white-turn');
-                turnIndicator.textContent = 'Tocca al Bianco';
-            } else {
-                turnIndicator.classList.remove('white-turn');
-                turnIndicator.classList.add('black-turn');
-                turnIndicator.textContent = 'Tocca al Nero';
-            }
-        }
-
-        // Funzione per cambiare turno (da chiamare dopo ogni mossa valida)
-        function toggleTurn() {
-            currentTurn = currentTurn === 'white' ? 'black' : 'white';
-            updateTurnIndicator();
-        }
-
-        // Inizializza
-        updateTurnIndicator();
-
-        // Esempio: click sul turnIndicator per testare il cambio turno
-        turnIndicator.addEventListener('click', toggleTurn);
-    </script>
+    <script src="app.js"></script>
 </body>
+
 </html>
+
+
