@@ -20,9 +20,36 @@
 <body>
 
     <h1>Scacchi – 2 Giocatori</h1>
-    <canvas id="board" width="480" height="480"></canvas>
+
+     <div id="turnIndicator" style="
+        font-size: 20px;
+        margin-top: 5px;
+        font-weight: bold;
+    ">
+        Tocca al Bianco
+    </div>
+
+    <div id="boardWrapper" style="
+        padding-bottom: calc(env(safe-area-inset-bottom) + 40px);
+    ">
+        <canvas id="board"></canvas>
+    </div>
+
+    <button id="newGameBtn" style="
+        margin-top: 30px;
+        margin-bottom: 40px;
+        padding: 10px 20px;
+        font-size: 18px;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+    ">
+        Nuova Partita
+    </button>    
 
     <script src="app.js"></script>
 </body>
 
 </html>
+
